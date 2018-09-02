@@ -1,0 +1,302 @@
+.hidden {
+    display: none;
+}
+
+
+/*TYPO*/
+
+p, h3,  span, a {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, #section_contact a {
+    font-family: 'Roboto Condensed', sans-serif;  
+}
+
+h1 {
+    text-transform: uppercase;
+    color:#339966;
+    font-size:48px;
+    letter-spacing: 0.2em;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size:32px;
+    color:#acacac;
+    font-weight: 100;
+}
+
+h3 {
+    font-size:24px;
+    line-height:32px;
+}
+
+h3 span {
+    font-size:20px;
+    color:#acacac;
+}
+
+p {
+    font-size:20px;
+    line-height:26px;
+}
+
+
+/* HEADER (NAV) */
+
+.nav-content {
+    background:#99cc99;
+    position:fixed;
+    width:100%;
+}
+
+.nav-content nav {
+    width:1080px;
+    margin:0 auto;
+}
+
+nav li {
+    display:inline-block;
+    padding:20px;
+}
+
+nav a {
+    text-decoration:none;
+    text-transform: uppercase;
+    text-shadow: 0px 1px #444;
+    transition: 0.5s;
+    color:#222;
+    line-height: 23px;
+    padding:20px;
+}
+
+nav a:hover { 
+    color:white;
+}
+
+#btn_hamburger {
+    display:none;
+    position: fixed;
+    z-index: 6;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 28px;
+    padding: 10px;
+    float: left;
+    margin:20px;
+}
+
+#overlay {
+    position: fixed;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .4);
+}
+
+.nav-sidebar {
+    background:#99cc99;
+    display: none;
+    position: fixed;
+    width: 84%;
+    z-index: 7;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    transform: translateX(-100%);
+    transition: transform .2s ease-out;
+    box-shadow: 0 1px 50px rgba(0, 0, 0,  0.25);
+}
+
+.nav-sidebar li {
+    display: block;
+}
+
+.nav-sidebar a {
+    font-size: 24px;
+}
+
+
+/* SECTIONS */
+
+section {
+    min-height : 86vh;
+}
+
+section h1 {
+    padding-top:100px;
+}
+
+section h1:after {
+    content: "";
+    height: 4px;
+    display: inline-block;
+    vertical-align: top;
+    background-color: #339966;
+    width: 100%;
+} 
+
+section h2 {
+    padding:20px 0; 
+}
+
+section h3 {
+    padding:15px 0; 
+}
+
+section p {
+    padding:10px 0; 
+}
+
+.section-content {
+    width : 60%;
+    margin:0 auto;
+}
+
+
+    /* PRESENTATION */
+
+#section_presentation img {
+    width:30%;
+    float:right;
+    padding:20px;
+}
+
+
+    /* COMPETENCES */
+
+.skillbar {
+    display:block;
+    margin-bottom:20px;
+    width:100%;
+    height:20px;
+    background:#eee;
+}
+
+.skillbar-title {
+    font-size:15px;
+    letter-spacing: 0.15em;
+    color:#fff;
+    display:block;
+    height:20px;
+    line-height:20px;
+    padding-left:0.5em;
+}
+
+.skillbar-bar {
+    height:20px;
+    width:0px;
+    background:#99cc99;
+}
+
+
+    /* CONTACT */
+
+#section_contact a {
+    display: block;
+    margin:50px auto;
+    width:270px;
+    padding:15px;
+    text-align: center;
+    border: 1px solid #999;
+    border-radius: 6px;
+    text-decoration: none;
+    color:#222;
+    font-size:24px;
+    transition: 0.4s;
+    font-weight: 100;
+}
+
+#section_contact a:hover {
+    background:#99cc99;
+}
+
+
+/* FOOTER */
+
+footer {
+    margin-top:50px;
+    padding: 20px 0;
+}
+
+footer p {
+    font-size:12px;
+    color:#777;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 1080px) {
+
+    .nav-content {
+        display: none;
+    }
+    
+    .nav-sidebar, .nav-sidebar .nav-content, #btn_hamburger{
+        display: block;
+    }
+
+    .sidebar_activated {
+        transform: translateX(0);
+    }
+    
+}
+
+@media screen and (max-width: 680px) {
+    
+    h1 {
+        font-size:32px;
+    }
+    
+    h2 {
+        font-size:24px;
+        line-height:28px;
+    }
+    
+    h3 {
+        font-size:18px;
+        line-height:22px;
+    }
+    
+    h3 span {
+        font-size:18px;
+    }
+    
+    p{
+        font-size:16px;
+    }
+
+    section h1 {
+        padding-top:50px;
+    }
+    
+    #section_contact a {
+        font-size:18px;
+        width:240px;
+    }
+    
+}
+
+@media screen and (max-width: 480px) {
+
+    h1 {
+        font-size:24px
+    }
+    
+    #section_presentation img {
+       display:none;
+    }
+        
+    #section_contact a { 
+        overflow: hidden;
+        width:inherit;
+        padding:15px 5px;
+        font-size:15px;
+    }
+
+}
